@@ -13,6 +13,7 @@ FILE_NAME=$DIR$TIMESTAMP$OUTPUT
 ARGS='-sC -p 445 --script smb-vuln-ms17-010.nse -iL ip_pools.txt --reason'
 IPREG='[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'
 
+# Enter email addersses here 'email0@email.com email1@email.com'
 EMAIL_RECIPIENTS=''
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # A quick word about the scan starting
@@ -44,7 +45,7 @@ GR3=`grep -i -B 10 "state: VULNERABLE" $FILE_NAME| grep -E $IPREG | awk -F \( '{
 if [[ $GR ]]; then
     echo "$PLUS Systems Vulnerable:" $GR2 "IP Address:" $GR3
     # If you want to email the results uncoment out the next line.                                                                         
-    #echo -e "\$PLUS $TAIL\n\n$PLUS Systems Vulnerable:" $GR2 "IP Address:" $GR3 | mail -s "WannaCry Vulnerability Report " $EMAIL_RECIPIENTS
+    echo -e "\$PLUS $TAIL\n\n$PLUS Systems Vulnerable:" $GR2 "IP Address:" $GR3 | mail -s "WannaCry Vulnerability Report " $EMAIL_RECIPIENTS
 else
     echo "$PLUS No systems vulnerable"
     # If you want emails every time this thing runs uncomment out the next line.
