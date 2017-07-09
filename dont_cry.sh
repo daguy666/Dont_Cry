@@ -44,7 +44,7 @@ GR3=`grep -i -B 10 "state: VULNERABLE" $FILE_NAME| grep -E $IPREG | awk -F \( '{
 
 if [[ $GR ]]; then
     echo "$PLUS Systems Vulnerable:" $GR2 "IP Address:" $GR3
-    # If you want to email the results uncoment out the next line.                                                                         
+    # If you want don't want to email the results coment out the next line.                                                                         
     echo -e "\$PLUS $TAIL\n\n$PLUS Systems Vulnerable:" $GR2 "IP Address:" $GR3 | mail -s "WannaCry Vulnerability Report " $EMAIL_RECIPIENTS
 else
     echo "$PLUS No systems vulnerable"
