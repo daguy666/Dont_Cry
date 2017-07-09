@@ -21,3 +21,7 @@ This is a wrapper shell script using the nmap scripting engine to scan for syste
 - Clean up the code a bit.
 - Have a file check that the path of nmap and $DIR exist.
 - Have this log out to a file on runtime.
+
+---
+#### Other info
+https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
