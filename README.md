@@ -24,5 +24,5 @@ This is a wrapper shell script using the nmap scripting engine to scan for syste
 
 ---
 #### Other info
-https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
-http://thekillingtime.com/?p=438
+- https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+- http://thekillingtime.com/?p=438
